@@ -1,0 +1,34 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "simple hello world",
+  "scripts": {
+    "build": "echo 'building:' && webpack --progress --colors",
+    "dist": "echo 'distributing:' && webpack -p --progress --colors",
+    "preview": "echo 'launching preview' && npm run build && npm run start-server",
+    "dev": "echo 'launching dev environment' && npm run build && npm run start-dev-server",
+    "start-server": "echo 'starting server' && http-server -o -p 8088 dist",
+    "start-dev-server": "echo 'starting dev server' && webpack-dev-server --devtool eval --progress --colors --inline --hot --content-base dist"
+  },
+  "author": "Mike Chabot",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.1.0",
+    "http-server": "^0.8.5",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
